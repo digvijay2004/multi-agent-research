@@ -1,16 +1,12 @@
 from crewai import Agent
-from langchain_groq import ChatGroq
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
-def get_llm():
-    return ChatGroq(
-        model="llama-3.3-70b-versatile",
-        api_key=os.getenv("GROQ_API_KEY"),
-        temperature=0.7
-    )
+os.environ["OPENAI_API_KEY"] = "NA"
+
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
 def create_researcher():
     return Agent(
@@ -19,7 +15,7 @@ def create_researcher():
         backstory="""You are an expert researcher with years of experience 
         in finding, analyzing, and organizing information from various sources. 
         You are thorough, accurate, and always provide well-sourced information.""",
-        llm=get_llm(),
+        llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
         verbose=True,
         allow_delegation=False
     )
@@ -31,7 +27,7 @@ def create_analyst():
         backstory="""You are a skilled analyst who specializes in processing 
         large amounts of information and identifying the most important patterns, 
         trends, and insights. You are critical, objective, and data-driven.""",
-        llm=get_llm(),
+        llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
         verbose=True,
         allow_delegation=False
     )
@@ -44,7 +40,6 @@ def create_writer():
         converting complex information into clear, well-structured documents. 
         You write in a professional yet accessible style and always organize 
         information logically.""",
-        llm=get_llm(),
+        llm="groq/meta-llama/llama-4-scout-17b-16e-instruct",
         verbose=True,
         allow_delegation=False
-    )
