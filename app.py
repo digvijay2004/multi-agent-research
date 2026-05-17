@@ -26,12 +26,7 @@ demo = gr.Interface(
     Three specialized agents collaborate to research any topic:
     Agent 1 (Researcher) gathers information,
     Agent 2 (Analyst) extracts key insights,
-    Agent 3 (Writer) produces a structured report.""",
-    examples=[
-        ["Latest trends in Large Language Models"],
-        ["Applications of RAG in enterprise AI"],
-        ["Future of multi-agent AI systems"]
-    ]
+    Agent 3 (Writer) produces a structured report."""
 )
 
 if __name__ == "__main__":
