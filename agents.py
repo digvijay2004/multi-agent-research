@@ -1,12 +1,13 @@
-from crewai import Agent, LLM
+from crewai import Agent
+from langchain_groq import ChatGroq
 import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 def get_llm():
-    return LLM(
-        model="groq/llama-3.3-70b-versatile",
+    return ChatGroq(
+        model="llama-3.3-70b-versatile",
         api_key=os.getenv("GROQ_API_KEY"),
         temperature=0.7
     )
