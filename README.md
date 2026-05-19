@@ -46,3 +46,24 @@ Try it here: https://huggingface.co/spaces/Digvijay8809/multi-agent-research
 5. Add your Groq API key to `.env`: `GROQ_API_KEY=your_key_here`
 6. Run: `python app.py`
 7. Visit: `http://127.0.0.1:7860`
+
+## How to Run Locally
+
+1. Clone the repo
+   git clone https://github.com/digvijay2004/multi-agent-research.git
+   cd multi-agent-research
+
+2. Create virtual environment
+   python -m venv venv
+   venv\Scripts\activate
+
+3. Install dependencies
+   pip install -r requirements.txt
+
+4. Add your Groq API key to .env
+   GROQ_API_KEY=your_key_here
+
+5. Run the app
+   python app.py
+
+6. Visit http://127.0.0.1:7860
