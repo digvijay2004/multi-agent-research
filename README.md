@@ -2,6 +2,21 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Hugging%20Face-yellow)](https://huggingface.co/spaces/Digvijay8809/multi-agent-research)
 
+```mermaid
+graph TD
+    A[User enters Research Topic] --> B[CrewAI Crew]
+    B --> C[Agent 1: Research Specialist]
+    C --> D[Groq LLM - Llama 4 Scout]
+    D --> E[Research Report]
+    E --> F[Agent 2: Data Analyst]
+    F --> G[Groq LLM - Llama 4 Scout]
+    G --> H[Key Insights & Analysis]
+    H --> I[Agent 3: Technical Writer]
+    I --> J[Groq LLM - Llama 4 Scout]
+    J --> K[Structured Research Report]
+    K --> L[Gradio UI - Final Output]
+```
+
 A multi-agent AI research system where three specialized agents collaborate autonomously to research any topic and produce structured reports.
 
 ## How It Works
